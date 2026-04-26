@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
     server: {
       host: true,
       port: 8080,
-      allowedHosts: "all",
+      allowedHosts: ['divyam-1.onrender.com'],
       hmr: {
         overlay: false,
       },
