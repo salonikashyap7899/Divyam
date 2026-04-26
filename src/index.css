@@ -1,0 +1,102 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Sacred Indigo design system. All colors HSL. */
+@layer base {
+  :root {
+    --background: 42 38% 96%;
+    --foreground: 224 60% 12%;
+
+    --card: 42 38% 98%;
+    --card-foreground: 224 60% 12%;
+
+    --popover: 42 38% 98%;
+    --popover-foreground: 224 60% 12%;
+
+    --primary: 224 60% 15%;
+    --primary-foreground: 42 38% 96%;
+
+    --secondary: 42 30% 90%;
+    --secondary-foreground: 224 60% 15%;
+
+    --muted: 42 25% 92%;
+    --muted-foreground: 224 15% 40%;
+
+    --accent: 44 56% 54%;
+    --accent-foreground: 224 60% 10%;
+
+    --gold: 44 56% 54%;
+    --gold-foreground: 224 60% 10%;
+
+    --destructive: 0 70% 45%;
+    --destructive-foreground: 42 38% 96%;
+
+    --border: 42 25% 85%;
+    --input: 42 25% 88%;
+    --ring: 44 56% 54%;
+
+    --radius: 0.5rem;
+
+    --gradient-hero: linear-gradient(135deg, hsl(224 60% 12%), hsl(218 55% 22%));
+    --gradient-gold: linear-gradient(135deg, hsl(44 56% 54%), hsl(40 65% 65%));
+    --shadow-elegant: 0 20px 50px -20px hsl(224 60% 12% / 0.35);
+    --shadow-gold: 0 10px 40px -10px hsl(44 56% 54% / 0.45);
+
+    --sidebar-background: 42 38% 96%;
+    --sidebar-foreground: 224 60% 15%;
+    --sidebar-primary: 224 60% 15%;
+    --sidebar-primary-foreground: 42 38% 96%;
+    --sidebar-accent: 42 30% 90%;
+    --sidebar-accent-foreground: 224 60% 15%;
+    --sidebar-border: 42 25% 85%;
+    --sidebar-ring: 44 56% 54%;
+  }
+
+  .dark {
+    --background: 224 60% 8%;
+    --foreground: 42 38% 94%;
+    --card: 224 55% 11%;
+    --card-foreground: 42 38% 94%;
+    --popover: 224 55% 11%;
+    --popover-foreground: 42 38% 94%;
+    --primary: 42 38% 94%;
+    --primary-foreground: 224 60% 10%;
+    --secondary: 224 40% 18%;
+    --secondary-foreground: 42 38% 94%;
+    --muted: 224 30% 16%;
+    --muted-foreground: 42 15% 65%;
+    --accent: 44 56% 54%;
+    --accent-foreground: 224 60% 10%;
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 42 38% 94%;
+    --border: 224 30% 20%;
+    --input: 224 30% 20%;
+    --ring: 44 56% 54%;
+    --sidebar-background: 224 60% 8%;
+    --sidebar-foreground: 42 38% 94%;
+    --sidebar-primary: 44 56% 54%;
+    --sidebar-primary-foreground: 224 60% 10%;
+    --sidebar-accent: 224 40% 18%;
+    --sidebar-accent-foreground: 42 38% 94%;
+    --sidebar-border: 224 30% 20%;
+    --sidebar-ring: 44 56% 54%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
+  }
+  h1, h2, h3, h4, .font-serif { font-family: "Instrument Serif", Georgia, serif; font-weight: 400; letter-spacing: -0.01em; }
+}
+
+@layer utilities {
+  .gradient-hero { background: var(--gradient-hero); }
+  .gradient-gold { background: var(--gradient-gold); }
+  .shadow-elegant { box-shadow: var(--shadow-elegant); }
+  .shadow-gold { box-shadow: var(--shadow-gold); }
+  .text-gold { color: hsl(var(--gold)); }
+}
