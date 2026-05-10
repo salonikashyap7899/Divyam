@@ -8,7 +8,7 @@ export default defineConfig(({ mode }) => {
     server: {
       host: true,
       port: 8080,
-      allowedHosts: ['divyam-1.onrender.com'],
+      allowedHosts: ['divyam-one.vercel.app'],
       hmr: {
         overlay: false,
       },
